@@ -24,5 +24,12 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        
+        private void Add11(object sender, RoutedEventArgs e)
+        {
+            Add add1 = new Add();
+            add1.Show();
+        }
     }
 }
