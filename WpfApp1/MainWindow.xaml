@@ -70,6 +70,22 @@
               Margin="0,-559,0,0"
               Background="#92D3D3">
 
+            <Button Width="25" Height="25"
+                    Margin="0,0,0,0" 
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}" 
+                    Foreground="{x:Null}"
+                    Click="Logo1">
+
+                <Image Source="Resources/Truba.png"
+                   Width="35" Height="35"
+                   Margin="0,-5,0,0"
+                   x:Name="Logo"/>
+
+            </Button>
+
+            
+
             <MenuItem Header="Источник">
                 <MenuItem Header="Добавить..."/>
                 <MenuItem Header="Удалить"/>

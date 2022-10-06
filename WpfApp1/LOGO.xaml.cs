@@ -10,32 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для LOGO.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LOGO : Window
     {
-        public MainWindow()
+        public LOGO()
         {
             InitializeComponent();
-        }
-
-        
-        private void Add11(object sender, RoutedEventArgs e)
-        {
-            Add add1 = new Add();
-            add1.Show();
-        }
-
-        private void Logo1(object sender, RoutedEventArgs e)
-        {
-            LOGO logo = new LOGO();
-            logo.Show();
         }
     }
 }

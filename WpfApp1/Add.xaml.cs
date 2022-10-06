@@ -23,5 +23,10 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Otm_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
     }
 }
