@@ -25,7 +25,12 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        
+        private void Reg(object sender, RoutedEventArgs e)
+        {
+            Registr registr = new Registr();
+            registr.Show();
+        }
+
         private void Add11(object sender, RoutedEventArgs e)
         {
             Add add1 = new Add();

@@ -112,7 +112,7 @@
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
                 Style="{DynamicResource ButtonStyle}"
-                Click="Add11"/>
+                Click="Reg"/>
 
         <Button x:Name="Remove"
                 Margin="600,-225,0,0"
