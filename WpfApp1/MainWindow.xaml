@@ -66,8 +66,8 @@
         </Style>
     </Window.Resources>
     <Grid Background="#E0FFFF">
-        <Menu Height="25" Width="800"
-              Margin="0,-559,0,0"
+        <Menu Height="40" Width="800"
+              Margin="0,-545,0,0"
               Background="#92D3D3">
 
             <Button Width="25" Height="25"
@@ -75,7 +75,7 @@
                     Background="{x:Null}" 
                     BorderBrush="{x:Null}" 
                     Foreground="{x:Null}"
-                    Click="Logo1">
+                    Click="Logo1" Cursor="Hand">
 
                 <Image Source="Resources/Truba.png"
                    Width="35" Height="35"
