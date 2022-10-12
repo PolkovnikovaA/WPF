@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для Remote.xaml
+    /// Логика взаимодействия для Delet_Ist.xaml
     /// </summary>
-    public partial class Remote : Window
+    public partial class Delet_Ist : Window
     {
-        public Remote()
+        public Delet_Ist()
         {
             InitializeComponent();
         }

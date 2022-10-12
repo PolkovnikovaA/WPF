@@ -64,16 +64,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add_Vibr.xaml.cs">
+      <DependentUpon>Add_Vibr.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Avtor.xaml.cs">
       <DependentUpon>Avtor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Delet_Ist.xaml.cs">
+      <DependentUpon>Delet_Ist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Delet_Vibr.xaml.cs">
+      <DependentUpon>Delet_Vibr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Red_Ist.xaml.cs">
+      <DependentUpon>Red_Ist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Red_Vibr.xaml.cs">
+      <DependentUpon>Red_Vibr.xaml</DependentUpon>
     </Compile>
     <Compile Include="Registr.xaml.cs">
       <DependentUpon>Registr.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Remote.xaml.cs">
-      <DependentUpon>Remote.xaml</DependentUpon>
-    </Compile>
     <Page Include="Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Add_Vibr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -81,7 +97,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LOGO.xaml">
+    <Page Include="Delet_Ist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Delet_Vibr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,18 +116,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LOGO.xaml.cs">
-      <DependentUpon>LOGO.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Registr.xaml">
+    <Page Include="Red_Ist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Remote.xaml">
+    <Page Include="Red_Vibr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

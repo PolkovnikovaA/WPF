@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для LOGO.xaml
+    /// Логика взаимодействия для Red_Ist.xaml
     /// </summary>
-    public partial class LOGO : Window
+    public partial class Red_Ist : Window
     {
-        public LOGO()
+        public Red_Ist()
         {
             InitializeComponent();
         }
+
+        
     }
 }

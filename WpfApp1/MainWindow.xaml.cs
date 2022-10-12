@@ -37,10 +37,40 @@ namespace WpfApp1
             add1.Show();
         }
 
-        private void Logo1(object sender, RoutedEventArgs e)
+        private void Add_Ist(object sender, RoutedEventArgs e)
         {
-            LOGO logo = new LOGO();
-            logo.Show();
+            Add add = new Add();
+            add.Show();
+        }
+
+        private void Redakt_Click(object sender, RoutedEventArgs e)
+        {
+            Red_Ist red_Ist = new Red_Ist();
+            red_Ist.Show();
+        }
+
+        private void Remove_Ist(object sender, RoutedEventArgs e)
+        {
+            Delet_Ist delet_Ist = new Delet_Ist();
+            delet_Ist.Show();
+        }
+
+        private void Add_Vibr(object sender, RoutedEventArgs e)
+        {
+            Add_Vibr add_Vibr = new Add_Vibr();
+            add_Vibr.Show();
+        }
+
+        private void Red_Vibr(object sender, RoutedEventArgs e)
+        {
+            Red_Vibr red_Vibr = new Red_Vibr();
+            red_Vibr.Show();
+        }
+
+        private void Delet_Vibr(object sender, RoutedEventArgs e)
+        {
+            Delet_Vibr delet_Vibr = new Delet_Vibr();
+            delet_Vibr.Show();
         }
     }
 }

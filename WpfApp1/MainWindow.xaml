@@ -66,36 +66,62 @@
         </Style>
     </Window.Resources>
     <Grid Background="#E0FFFF">
-        <Menu Height="40" Width="800"
-              Margin="0,-545,0,0"
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Menu Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="13"
               Background="#92D3D3">
 
-            <Button Width="25" Height="25"
-                    Margin="0,0,0,0" 
-                    Background="{x:Null}" 
-                    BorderBrush="{x:Null}" 
-                    Foreground="{x:Null}"
-                    Click="Logo1" Cursor="Hand">
-                
-                <Image Source="Resources/Truba.png"
-                   Width="35" Height="35"
-                   Margin="0,-5,0,0"
+            <Image Width="70" Height="60" 
+                   Margin="-15,0,0,0"
+                   Source="Resources/Truba.png"
                    x:Name="Logo" />
 
-            </Button>
-
-            
-
             <MenuItem Header="Источник">
-                <MenuItem Header="Добавить..."/>
-                <MenuItem Header="Удалить"/>
-                <MenuItem Header="Редактировать..."/>
+                <MenuItem Header="Добавить..." Click="Add_Ist"/>
+                <MenuItem Header="Удалить" Click="Remove_Ist"/>
+                <MenuItem Header="Редактировать..." Click="Redakt_Click"/>
             </MenuItem>
 
             <MenuItem Header="Выбросы">
-                <MenuItem Header="Добавить..."/>
-                <MenuItem Header="Удалить"/>
-                <MenuItem Header="Редактировать..."/>
+                <MenuItem Header="Добавить..." Click="Add_Vibr"/>
+                <MenuItem Header="Удалить" Click="Delet_Vibr"/>
+                <MenuItem Header="Редактировать..." Click="Red_Vibr"/>
             </MenuItem>
 
             <MenuItem Header="Расчет">
@@ -105,97 +131,87 @@
             </MenuItem>
         </Menu>
 
-        <Button x:Name="Add"
-                Margin="600,-330,0,0"
-                Height="35" Width="130"
-                Content="Добавить источник..."
+        <Button Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="4"
+                x:Name="Add"
+                Content="Добавить источник"
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
                 Style="{DynamicResource ButtonStyle}"
-                Click="Reg"/>
+                Click="Add_Ist"/>
 
-        <Button x:Name="Remove"
-                Margin="600,-225,0,0"
-                Height="35" Width="130"
-                Content="Удалить источник ..."
+        <Button Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="6"
+                x:Name="Remove"
+                Content="Удалить источник"
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
-                Style="{DynamicResource ButtonStyle}"/>
+                Style="{DynamicResource ButtonStyle}" 
+                Click="Remove_Ist"/>
 
-        <Button x:Name="Redakt"
-                Margin="600,-120,0,0"
-                Height="35" Width="130"
-                Content="Изменить источник ..."
+        <Button Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="8"
+                x:Name="Redakt"
+                Content="Редактировать ист."
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
-                Style="{DynamicResource ButtonStyle}"/>
+                Style="{DynamicResource ButtonStyle}" 
+                Click="Redakt_Click"/>
 
-        <Button x:Name="Add1"
-                Margin="600,120,0,0"
-                Height="35" Width="130"
-                Content="Добавить источник ..."
+        <Button Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="11"
+                Content="Добавить выбросы"
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
-                Style="{DynamicResource ButtonStyle}"/>
+                Style="{DynamicResource ButtonStyle}" 
+                Click="Add_Vibr"/>
 
-        <Button x:Name="Remove1"
-                Margin="600,225,0,0"
-                Height="35" Width="130"
-                Content="Удалить источник ..."
+        <Button Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="13"
+                x:Name="Remove1"
+                Content="Удалить выбросы"
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
-                Style="{DynamicResource ButtonStyle}"/>
+                Style="{DynamicResource ButtonStyle}" 
+                Click="Delet_Vibr"/>
 
-        <Button x:Name="Redakt1"
-                Margin="600,330,0,0"
-                Height="35" Width="130"
-                Content="Изменить источник ..."
+        <Button Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="15"
+                x:Name="Redakt1"
+                Content="Редактировать выбр."
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
-                Style="{DynamicResource ButtonStyle}"/>
+                Style="{DynamicResource ButtonStyle}" 
+                Click="Red_Vibr"/>
 
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=10}"
-                  Height="150" Width="550"
-                  Margin="-150,-225,0,0"/>
+        <DataGrid Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="4" Grid.RowSpan="5"
+                  d:ItemsSource="{d:SampleData ItemCount=10}"/>
 
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=10}"
-                  Height="150" Width="550"
-                  Margin="-150,225,0,0"/>
+        <DataGrid Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="11" Grid.RowSpan="5"
+                  d:ItemsSource="{d:SampleData ItemCount=10}"/>
 
-        <TextBlock x:Name="dfg"
-                   Height="25" Width="125"
-                   Margin="-571,-400,0,0"
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="3"
+                   x:Name="dfg"
                    Text="Источник выбросов"/>
 
-        <TextBlock x:Name="dfg1"
-                   Height="25" Width="125"
-                   Margin="-571,50,0,0"
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="10"
+                   x:Name="dfg1"
                    Text="Вабросы"/>
 
-        <Button x:Name="min"
-                Height="35" Width="165"
-                Margin="-535,480,0,0"
-                Content="Максимальные выбросы"
+        <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="17"
+                x:Name="min"
+                Content="Максимальные выбр."
                 Background="#92D3D3" 
                 BorderBrush="#186C6C"
                 Style="{DynamicResource ButtonStyle}"/>
-        
-        <Button x:Name="max"
-                Height="35" Width="165"
-                Margin="-160,480,0,0"
-                Content="Минимальные выбросы"
+
+        <Button Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="17"
+                x:Name="max"
+                Content="Минимальные выбр."
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
                 Style="{DynamicResource ButtonStyle}"/>
-        
-        <Button x:Name="sred"
-                Height="35" Width="165"
-                Margin="220,480,0,0"
+
+        <Button Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="17"
+                x:Name="sred"
                 Content="Средние выбросы"
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
                 Style="{DynamicResource ButtonStyle}"/>
         
-
     </Grid>
 </Window>

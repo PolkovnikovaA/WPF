@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для Add.xaml
+    /// Логика взаимодействия для Add_Vibr.xaml
     /// </summary>
-    public partial class Add : Window
+    public partial class Add_Vibr : Window
     {
-        public Add()
+        public Add_Vibr()
         {
             InitializeComponent();
         }
-
-        private void Otm_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
-
     }
 }
