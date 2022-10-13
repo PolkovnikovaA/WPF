@@ -179,7 +179,10 @@
                 Click="Red_Vibr"/>
 
         <DataGrid Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="4" Grid.RowSpan="5"
-                  d:ItemsSource="{d:SampleData ItemCount=10}"/>
+                  d:ItemsSource="{d:SampleData ItemCount=10}"
+                  AutoGenerateColumns="True" 
+                  Name="SourceGrid"
+                  ItemsSource="{Binding}"/>
 
         <DataGrid Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="11" Grid.RowSpan="5"
                   d:ItemsSource="{d:SampleData ItemCount=10}"/>

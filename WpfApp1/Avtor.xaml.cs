@@ -40,6 +40,8 @@ namespace WpfApp1
             return dataTable;
         }
 
+        
+
         private void btnavtoriz(object sender, RoutedEventArgs e)
         {
             string login_vx = TextBoxLog.Text;

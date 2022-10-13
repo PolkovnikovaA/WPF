@@ -28,6 +28,7 @@ namespace WpfApp1
                                                              // подключаемся к базе данных
             SqlConnection sqlConnection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=Man_Sor_V_A;User=33П;PWD=12357");
             sqlConnection.Open(); // открываем базу данных
+            string cmd = "SELECT * FROM Source";
             SqlCommand sqlCommand = sqlConnection.CreateCommand(); // создаём команду
             sqlCommand.CommandText = selectSQL; // присваиваем команде текст
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand); // создаём обработчик
@@ -39,6 +40,41 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=Truba;User=33П;PWD=12357"))
+            {
+            
+                connection.Open();
+                string cmd = "SELECT * FROM Source"; // Из какой таблицы нужен вывод 
+                SqlCommand createCommand = new SqlCommand(cmd, connection);
+                int n = Convert.ToInt32(createCommand.ExecuteScalar().ToString());
+                int[] id = new int[n];
+                string[] name = new string[n];
+                string[] Address = new string[n];
+
+                for (int i = 1; i <= n; i++)
+                {
+                    SqlCommand command1 = new SqlCommand("select id_source from Source Where id_source=" + i + "", connection);
+                    if (command1.ExecuteScalar() is null)
+                    {
+
+                    }
+                    else 
+                    {
+                        id[i - 1] = Convert.ToInt32(command1.ExecuteScalar().ToString());
+                        SqlCommand command2 = new SqlCommand("select name from Source Where id_source=" + i + "", connection);
+                        name[i-1] = Convert.ToString(command2.ExecuteScalar().ToString());
+                        SqlCommand command3 = new SqlCommand("select name from Source Where id_source=" + i + "", connection);
+                        Address[i-1] = Convert.ToString(command3.ExecuteScalar().ToString());
+                    }
+                }
+                List<SourceGrid> istlist = new List<SourceGrid>
+                {
+
+                };
+
+            }
+
+
         }
 
         private void Reg(object sender, RoutedEventArgs e)
