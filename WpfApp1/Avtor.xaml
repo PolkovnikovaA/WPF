@@ -48,34 +48,45 @@
                            HorizontalAlignment="Center"
                            Margin="0 0 0 20" />
 
-                <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" >
+                <TextBox x:Name="TextBoxLog" 
+                         
+                         materialDesign:HintAssist.Hint="Введите логин" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" >
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
                     </TextBox.BorderBrush>
 
                 </TextBox>
 
-                <TextBox x:Name="TextBoxpass" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350">
+                <PasswordBox x:Name="TextBoxpass" 
+                             materialDesign:HintAssist.Hint="Введите пароль" 
+                             CaretBrush="#FF186C6C" 
+                             Margin="0,50,0,0"
+                             SelectionBrush="#FF186C6C" 
+                             Width="350"/>
 
-                    <TextBox.BorderBrush>
-                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
-                    </TextBox.BorderBrush>
+                
 
-                </TextBox>
+                    
+
 
                 <Button x:Name="avt"
-                Margin="-210,45,0,0"
-                Height="35" Width="130"
-                Content="Авторизация"
-                Background="#92D3D3"
-                BorderBrush="#186C6C" Cursor="Hand"/>
+                        Margin="-210,45,0,0"
+                        Height="35" Width="130"
+                        Content="Авторизация"
+                        Background="#92D3D3"
+                        BorderBrush="#186C6C" 
+                        Cursor="Hand"
+                        Click="btnavtoriz"/>
                 
                 <Button x:Name="reg"
-                Height="35" Width="130"
-                Content="Регистрация"
-                Margin="210,-35,0,0"
-                Background="#92D3D3"
-                BorderBrush="#186C6C" Cursor="Hand"/>
+                        Height="35" Width="130"
+                        Content="Регистрация"
+                        Margin="210,-35,0,0"
+                        Background="#92D3D3"
+                        BorderBrush="#186C6C" 
+                        Click="btnReg"
+                        Cursor="Hand"/>
 
 
             </StackPanel>

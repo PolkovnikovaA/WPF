@@ -54,28 +54,28 @@
                     
                 </TextBox>
 
-                <TextBox x:Name="TextBoxpass" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350">
+                <PasswordBox x:Name="TextBoxpass" 
+                             materialDesign:HintAssist.Hint="Введите пароль" 
+                             CaretBrush="#FF186C6C" 
+                             Margin="0,20,0,0"
+                             SelectionBrush="#FF186C6C" 
+                             Width="350"/>
 
-                    <TextBox.BorderBrush>
-                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
-                    </TextBox.BorderBrush>
-
-                </TextBox>
-
-                <TextBox x:Name="TextBoxpass2" materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350">
-
-                    <TextBox.BorderBrush>
-                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
-                    </TextBox.BorderBrush>
-
-                </TextBox>
+                <PasswordBox x:Name="TextBoxpass2" 
+                             materialDesign:HintAssist.Hint="Введите пароль" 
+                             CaretBrush="#FF186C6C" 
+                             Margin="0,20,0,0"
+                             SelectionBrush="#FF186C6C" 
+                             Width="350"/>
 
                 <Button 
                 Margin="0,45,0,0"
                 Height="35" Width="130"
                 Content="Регистрация"
                 Background="#92D3D3"
-                BorderBrush="#186C6C" Cursor="Hand"/>
+                BorderBrush="#186C6C" 
+                    Cursor="Hand"
+                    Click="Zareg"/>
                
 
             </StackPanel>
