@@ -9,9 +9,27 @@
         Title="Registr" Height="500" Width="800">
     <Grid Background="#E0FFFF">
 
-        <Border MinWidth="150" 
-                Height="350"
-                Margin="15" 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="5"
                 Background="#FFFFFF" 
                 VerticalAlignment="Center" 
                 Padding="30" MaxWidth="550" 
@@ -27,8 +45,7 @@
                 <TextBlock Text="Добро пожаловать!" 
                            FontSize="30" 
                            FontWeight="Bold"
-                           HorizontalAlignment="Center"
-                           Margin="0 0 0 20" />
+                           HorizontalAlignment="Center"/>
 
                 <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" >
                     <TextBox.BorderBrush>

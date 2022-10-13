@@ -9,9 +9,27 @@
         Title="Avtor" Height="450" Width="700">
     <Grid Background="#E0FFFF">
 
-        <Border Width="500" 
-                Height="300"
-                Margin="15" 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="5"
                 Background="#FFFFFF" 
                 VerticalAlignment="Center" 
                 Padding="30" MaxWidth="550" 
