@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.Add_Vibr"
+<Window x:Class="WpfApp1.Add_Vibr"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -35,27 +35,32 @@
 
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5"
                    Text="Источник:"/>
-        
+        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5"
+                 x:Name="Istok1"/>
         <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5"
                    Text="Количество выбросов"/>
 
-        <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5"
+                 x:Name="Koll"/>
 
         <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5"
                    Text="Комментарий"/>
 
-        <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5"
+                 x:Name="Koment"/>
 
         <TextBlock Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="5"
                    Text="Дата"/>
 
-        <DatePicker Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <DatePicker Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"
+                    x:Name="date"/>
 
         <Button Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2"
                 x:Name="Add2"
                 Content="Добавить"
                 Background="#92D3D3"
-                BorderBrush="#186C6C"/>
+                BorderBrush="#186C6C"
+                Click="Add3_Click"/>
 
         
 
