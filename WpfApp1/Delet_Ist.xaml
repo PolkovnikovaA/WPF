@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.Delet_Ist"
+<Window x:Class="WpfApp1.Delet_Ist"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -30,11 +30,14 @@
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5"
                    Text="Вы действительно хотите удалить источник:"/>
 
+        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5"
+                 x:Name="Delete"/>
+
         <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
                 x:Name="Add2"
                 Content="Да"
                 Background="#92D3D3"
-                BorderBrush="#186C6C"/>
+                BorderBrush="#186C6C" Click="Del_Click"/>
 
         <Button Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2"
                 Content="Нет"
