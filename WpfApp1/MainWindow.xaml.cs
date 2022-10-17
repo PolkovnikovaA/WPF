@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -97,16 +97,16 @@ namespace WpfApp1
 
                 //string cmd = "SELECT * FROM Source"; // Из какой таблицы нужен вывод 
                 //SqlCommand createCommand = new SqlCommand(cmd, connection);
-                int n = Convert.ToInt32(createCommand.ExecuteScalar().ToString());
-                int[] id_emission = new int[n];
-                int[] id_source = new int[n];
-                float[] count = new float[n];
-                string[] text = new string[n];
-                string[] date = new string[n];
+                int k = Convert.ToInt32(createCommand.ExecuteScalar().ToString());
+                int[] id_emission = new int[k];
+                int[] id_source = new int[k];
+                float[] count = new float[k];
+                string[] text = new string[k];
+                string[] date = new string[k];
 
-                for (int i = 1; i <= n; i++)
+                for (int i = 1; i <= k; i++)
                 {
-                    SqlCommand createCommand1 = new SqlCommand("select id_source from Emission Where id_emission=" + i + "", connection);
+                    SqlCommand createCommand1 = new SqlCommand("select id_emission from Emission Where id_emission=" + i + "", connection);
                     if (createCommand1.ExecuteScalar() is null)
                     {
 
@@ -126,7 +126,7 @@ namespace WpfApp1
                 {
 
                 };
-                for (int i = 1; i <= n; i++)
+                for (int i = 1; i <= k; i++)
                 {
                     if (date[i - 1] == null)
                     {
@@ -160,36 +160,42 @@ namespace WpfApp1
         {
             Add add = new Add();
             add.Show();
+            Close();
         }
 
         private void Redakt_Click(object sender, RoutedEventArgs e)
         {
             Red_Ist red_Ist = new Red_Ist();
             red_Ist.Show();
+            Close();
         }
 
         private void Remove_Ist(object sender, RoutedEventArgs e)
         {
             Delet_Ist delet_Ist = new Delet_Ist();
             delet_Ist.Show();
+            Close();
         }
 
         private void Add_Vibr(object sender, RoutedEventArgs e)
         {
             Add_Vibr add_Vibr = new Add_Vibr();
             add_Vibr.Show();
+            Close();
         }
 
         private void Red_Vibr(object sender, RoutedEventArgs e)
         {
             Red_Vibr red_Vibr = new Red_Vibr();
             red_Vibr.Show();
+            Close();
         }
 
         private void Delet_Vibr(object sender, RoutedEventArgs e)
         {
             Delet_Vibr delet_Vibr = new Delet_Vibr();
             delet_Vibr.Show();
+            Close();
         }
 
         internal class Istlist
