@@ -38,6 +38,7 @@ namespace WpfApp1
 
         public MainWindow()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=Truba;User=33П;PWD=12357"))
             {
@@ -62,11 +63,12 @@ namespace WpfApp1
                     }
                     else 
                     {
-                        id_source[i - 1] = Convert.ToInt32(createCommand1.ExecuteScalar().ToString());
+                        
                         SqlCommand createCommand2 = new SqlCommand("select name from Source Where id_source=" + i + "", connection);
                         name[i-1] = Convert.ToString(createCommand2.ExecuteScalar().ToString());
                         SqlCommand createCommand3 = new SqlCommand("select address from Source Where id_source=" + i + "", connection);
                         address[i-1] = Convert.ToString(createCommand3.ExecuteScalar().ToString());
+
                     }
                 }
                 List<Istlist> istlist = new List<Istlist>
@@ -88,59 +90,56 @@ namespace WpfApp1
 
             }
 
+
             using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=Truba;User=33П;PWD=12357"))
             {
-
                 connection.Open();
-                SqlCommand createCommand = new SqlCommand("SELECT max(id_emission) FROM Emission", connection);
+                SqlCommand command = new SqlCommand("select max(id_emission) from Emission", connection);
+                int n = Convert.ToInt32(command.ExecuteScalar().ToString());
+                int[] id = new int[n];
+                float[] count = new float[n];
+                string[] text = new string[n];
+                string[] Date = new string[n];
 
-
-                //string cmd = "SELECT * FROM Source"; // Из какой таблицы нужен вывод 
-                //SqlCommand createCommand = new SqlCommand(cmd, connection);
-                int k = Convert.ToInt32(createCommand.ExecuteScalar().ToString());
-                int[] id_emission = new int[k];
-                int[] id_source = new int[k];
-                float[] count = new float[k];
-                string[] text = new string[k];
-                string[] date = new string[k];
-
-                for (int i = 1; i <= k; i++)
+                for (int i = 1; i <= n; i++)
                 {
-                    SqlCommand createCommand1 = new SqlCommand("select id_emission from Emission Where id_emission=" + i + "", connection);
-                    if (createCommand1.ExecuteScalar() is null)
+                    SqlCommand command1 = new SqlCommand("select id_source FROM Emission WHERE id_emission=" + i + "", connection);
+                    if (command1.ExecuteScalar() is null)
                     {
 
                     }
                     else
                     {
-                        id_emission[i - 1] = Convert.ToInt32(createCommand1.ExecuteScalar().ToString());
-                        SqlCommand createCommand2 = new SqlCommand("select count from Emission Where id_emission=" + i + "", connection);
-                        count[i - 1] = float.Parse(createCommand2.ExecuteScalar().ToString());
-                        SqlCommand createCommand3 = new SqlCommand("select text from Emission Where id_emission=" + i + "", connection);
-                        text[i - 1] = Convert.ToString(createCommand3.ExecuteScalar().ToString());
-                        SqlCommand createCommand4 = new SqlCommand("select date from Emission Where id_emission=" + i + "", connection);
-                        date[i - 1] = Convert.ToString(createCommand4.ExecuteScalar().ToString());
+                        id[i - 1] = Convert.ToInt32(command1.ExecuteScalar().ToString());
+                        SqlCommand command2 = new SqlCommand("select count FROM Emission WHERE id_emission=" + i + "", connection);
+                        count[i - 1] = float.Parse(command2.ExecuteScalar().ToString());
+                        SqlCommand command3 = new SqlCommand("select text FROM Emission WHERE id_emission=" + i + "", connection);
+                        text[i - 1] = Convert.ToString(command3.ExecuteScalar().ToString());
+                        SqlCommand command4 = new SqlCommand("select date FROM Emission WHERE id_emission=" + i + "", connection);
+                        Date[i - 1] = Convert.ToString(command4.ExecuteScalar().ToString());
                     }
                 }
-                List<Vibrlist> vibrlist = new List<Vibrlist>
+                List<Vibrlist> vibrosList = new List<Vibrlist>
                 {
 
                 };
-                for (int i = 1; i <= k; i++)
+                for (int i = 1; i <= n; i++)
                 {
-                    if (date[i - 1] == null)
+                    if (Date[i - 1] == null)
                     {
 
                     }
                     else
                     {
-                        vibrlist.Add(new Vibrlist { id_emission = i, id_source = id_source[i-1], count = count[i - 1], text = text[i - 1], date = date[i - 1] });
+                        vibrosList.Add(new Vibrlist { id_emission = i, id_source = id[i - 1], count = count[i - 1], text = text[i - 1], date = Date[i - 1] });
                     }
                 }
-                table_2.ItemsSource = vibrlist;
 
+                table_2.ItemsSource = vibrosList;
             }
 
+
+            
 
         }
 
@@ -195,6 +194,25 @@ namespace WpfApp1
         {
             Delet_Vibr delet_Vibr = new Delet_Vibr();
             delet_Vibr.Show();
+            Close();
+        }
+        private void Max_vibro(object sender, RoutedEventArgs e)
+        {
+            Maks_vibr max_Vibr = new Maks_vibr();
+            max_Vibr.Show();
+            Close();
+        }
+        private void Min_Vibro(object sender, RoutedEventArgs e)
+        {
+            min_vibr Min_Vibr = new min_vibr();
+            Min_Vibr.Show();
+            Close();
+        }
+
+        private void SR_Vibro(object sender, RoutedEventArgs e)
+        {
+            SR_vibr sr_Vibr = new SR_vibr();
+            sr_Vibr.Show();
             Close();
         }
 

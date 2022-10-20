@@ -27,12 +27,15 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="5"
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="7"
                 Background="#FFFFFF" 
                 VerticalAlignment="Center" 
                 Padding="30" MaxWidth="550" 
+                
                 CornerRadius="20">
 
             <Border.Effect>

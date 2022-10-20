@@ -125,9 +125,9 @@
             </MenuItem>
 
             <MenuItem Header="Расчет">
-                <MenuItem Header="Минимальные выбросы"/>
-                <MenuItem Header="Максимальные выбросы"/>
-                <MenuItem Header="Средние выбросы"/>
+                <MenuItem Header="Минимальные выбросы" Click="Min_Vibro"/>
+                <MenuItem Header="Максимальные выбросы" Click="Max_vibro"/>
+                <MenuItem Header="Средние выбросы" Click="SR_Vibro"/>
             </MenuItem>
         </Menu>
 
@@ -202,13 +202,15 @@
                 Content="Максимальные выбр."
                 Background="#92D3D3" 
                 BorderBrush="#186C6C"
-                Style="{DynamicResource ButtonStyle}"/>
+                Style="{DynamicResource ButtonStyle}"
+                Click="Max_vibro"/>
 
         <Button Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="17"
                 x:Name="max"
                 Content="Минимальные выбр."
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
+                Click="Min_Vibro"
                 Style="{DynamicResource ButtonStyle}"/>
 
         <Button Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="17"
@@ -216,6 +218,7 @@
                 Content="Средние выбросы"
                 Background="#92D3D3"
                 BorderBrush="#186C6C"
+                Click="SR_Vibro"
                 Style="{DynamicResource ButtonStyle}"/>
         
     </Grid>

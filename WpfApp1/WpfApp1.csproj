@@ -76,6 +76,12 @@
     <Compile Include="Delet_Vibr.xaml.cs">
       <DependentUpon>Delet_Vibr.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Maks_vibr.xaml.cs">
+      <DependentUpon>Maks_vibr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="min_vibr.xaml.cs">
+      <DependentUpon>min_vibr.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Red_Ist.xaml.cs">
       <DependentUpon>Red_Ist.xaml</DependentUpon>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Registr.xaml.cs">
       <DependentUpon>Registr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SR_vibr.xaml.cs">
+      <DependentUpon>SR_vibr.xaml</DependentUpon>
     </Compile>
     <Page Include="Add.xaml">
       <SubType>Designer</SubType>
@@ -120,6 +129,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Maks_vibr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="min_vibr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Red_Ist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Registr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SR_vibr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
